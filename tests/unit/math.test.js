@@ -19,7 +19,6 @@ describe('Math Utils', () => {
   //     expect(() => add('a', 2)).toThrow('Both arguments must be numbers');
   //   });
   // });
-
   // describe('subtract function', () => {
   //   it('should subtract two numbers', () => {
   //     expect(subtract(5, 3)).toBe(2);
