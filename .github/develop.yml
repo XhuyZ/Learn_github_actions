@@ -46,8 +46,8 @@ jobs:
 
     - name: Merge to staging
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "xhuyzdev@gmail.com"
+        git config --local user.name "xhuyz"
         git checkout staging
         git merge develop --no-ff -m "Auto-merge develop to staging"
         git push origin staging
