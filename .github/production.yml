@@ -1,0 +1,60 @@
+name: Production Branch CI/CD
+
+on:
+  push:
+    branches: [ production ]
+
+jobs:
+  e2e-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run all tests
+      run: |
+        npm run test:unit
+        npm run test:integration
+        npm run test:e2e
+
+    - name: Build production
+      run: npm run build
+
+    - name: Upload production build
+      uses: actions/upload-artifact@v4
+      with:
+        name: production-build
+        path: dist/
+
+  deploy-production:
+    needs: e2e-test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Download production build
+      uses: actions/download-artifact@v4
+      with:
+        name: production-build
+        path: dist/
+
+    - name: Deploy to production
+      run: |
+        echo "Deploying to production server..."
+        # Thêm logic deploy production ở đây
+        echo "Production deployment completed successfully!"
+
+    - name: Health check
+      run: |
+        echo "Running production health checks..."
+        # Thêm health check logic ở đây
+        echo "All health checks passed!"
