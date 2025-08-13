@@ -71,10 +71,7 @@ const Calculator = () => {
         <button onClick={() => handleOperation('add')} data-testid="add-btn">
           Add (+)
         </button>
-        <button onClick={() => handleOperation('subtract')} data-testid="subtract-btn">
-          Subtract (-)
-        </button>
-        {/* <button onClick={() => handleOperation('multiply')} data-testid="multiply-btn"> */}
+       {/* <button onClick={() => handleOperation('multiply')} data-testid="multiply-btn"> */}
         {/*   Multiply (×) */}
         {/* </button> */}
         {/* <button onClick={() => handleOperation('divide')} data-testid="divide-btn"> */}
