@@ -19,21 +19,21 @@ describe('Math Utils', () => {
       expect(() => add('a', 2)).toThrow('Both arguments must be numbers');
     });
   });
-  //
-  // describe('subtract function', () => {
-  //   it('should subtract two numbers', () => {
-  //     expect(subtract(5, 3)).toBe(2);
-  //   });
-  //
-  //   it('should handle negative results', () => {
-  //     expect(subtract(3, 5)).toBe(-2);
-  //   });
-  //
-  //   it('should throw error for non-number inputs', () => {
-  //     expect(() => subtract(null, 2)).toThrow('Both arguments must be numbers');
-  //   });
-  // });
-  //
+
+   describe('subtract function', () => {
+     it('should subtract two numbers', () => {
+       expect(subtract(5, 3)).toBe(2);
+     });
+
+     it('should handle negative results', () => {
+       expect(subtract(3, 5)).toBe(-2);
+     });
+
+     it('should throw error for non-number inputs', () => {
+       expect(() => subtract(null, 2)).toThrow('Both arguments must be numbers');
+     });
+   });
+
   // describe('multiply function', () => {
   //   it('should multiply two numbers', () => {
   //     expect(multiply(3, 4)).toBe(12);
