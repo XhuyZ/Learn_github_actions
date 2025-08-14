@@ -68,12 +68,12 @@ const Calculator = () => {
         />
       </div>
       <div className="operations">
-        {/* <button onClick={() => handleOperation('add')} data-testid="add-btn"> */}
-        {/*   Add (+) */}
-        {/* </button> */}
-        {/* <button onClick={() => handleOperation('subtract')} data-testid="subtract-btn"> */}
-        {/*   Subtract (-) */}
-        {/* </button> */}
+        <button onClick={() => handleOperation('add')} data-testid="add-btn">
+          Add (+)
+        </button>
+        <button onClick={() => handleOperation('subtract')} data-testid="subtract-btn">
+          Subtract (-)
+        </button>
         {/* <button onClick={() => handleOperation('multiply')} data-testid="multiply-btn"> */}
         {/*   Multiply (×) */}
         {/* </button> */}
